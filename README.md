@@ -26,5 +26,5 @@ Things that cause flow to be quick again:
 
 - Downgrading flow-bin to 0.65.0.
 - Inlining the code in `matrix.js` into `row-reduce.js`.
-- Removing an unused case from the `RowReduceState` type.
+- Removing a case from the `RowReduceState` type.
 - Simplifying `rowReduceNextState`.
