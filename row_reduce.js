@@ -5,7 +5,7 @@
 'use strict';
 
 /* ::
-import { type Field } from './field';
+import { type Field } from './matrix';
 import { Matrix } from './matrix';
 */
 

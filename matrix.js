@@ -2,7 +2,17 @@
 
 'use strict';
 
-/* :: import { type Field } from './field'; */
+/* ::
+// For why +T is used instead of T, see
+// https://github.com/facebook/flow/issues/5272 .
+interface Field<+T> {
+  plus(b: T): T;
+  equals(b: T): boolean;
+  // Work around the lack of static members in flow: see
+  // https://github.com/facebook/flow/issues/5590 .
+  zero(): T;
+}
+*/
 
 // eslint-disable-next-line no-unused-vars
 class Matrix /* :: <T: Field<*>> */ {
@@ -28,5 +38,6 @@ class Matrix /* :: <T: Field<*>> */ {
 }
 
 /* ::
+export type { Field };
 export { Matrix };
 */
