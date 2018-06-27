@@ -22,9 +22,9 @@ No errors!
 0inputs+712outputs (0major+10654minor)pagefaults 0swaps
 ```
 
-Things that cause flow to be quick again:
+Things that cause flow to be quick again (from ~30s to <1s):
 
-- Downgrading flow-bin to 0.65.0.
+- Downgrading flow-bin to 0.65.0. (0.66.0 - 0.71.0 runs into the hang from https://github.com/facebook/flow/issues/5870 )
 - Inlining the code in `matrix.js` into `row-reduce.js`.
 - Removing a case from the `RowReduceState` type.
 - Simplifying `rowReduceNextState`.
